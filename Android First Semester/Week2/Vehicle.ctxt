@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Vehicle
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Vehicle\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=st
+comment1.target=void\ start(boolean)
+comment2.params=sd
+comment2.target=void\ run(int)
+comment3.params=sp
+comment3.target=void\ stop(boolean)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

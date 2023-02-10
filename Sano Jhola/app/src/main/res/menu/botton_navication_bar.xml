@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navbar_ic_home"
+        android:icon="@drawable/ic_baseline_home_navbar"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navbar_ic_friends"
+        android:icon="@drawable/ic_baseline_person_navbar"
+        android:title="Friends" />
+
+    <item
+        android:id="@+id/navbar_ic_message"
+        android:icon="@drawable/ic_baseline_message_navbar"
+        android:title="Messages" />
+
+    <item
+        android:id="@+id/navbar_ic_notification"
+        android:icon="@drawable/ic_baseline_notification_navbar"
+        android:title="Notification" />
+
+    <item
+        android:id="@+id/navbar_ic_search"
+        android:icon="@drawable/ic_baseline_search_navbar"
+        android:title="Search" />
+
+</menu>

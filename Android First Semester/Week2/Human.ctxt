@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Human
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Human\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=eat\ food\ pri
+comment1.target=void\ eatFood(boolean,\ java.lang.String,\ int)
+comment2.params=st
+comment2.target=void\ play(boolean)
+comment3.params=dofast
+comment3.target=void\ work(java.lang.String)
+comment4.params=slp
+comment4.target=void\ sleep(java.lang.String)
+numComments=5
