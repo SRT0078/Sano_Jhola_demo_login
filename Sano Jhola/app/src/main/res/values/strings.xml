@@ -23,4 +23,6 @@
     <string name="confirm_password">Confirm password</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+    <string name="sitaram_thing">Sitaram @2023</string>
+    <string name="create_new_account">Create new Account</string>
 </resources>

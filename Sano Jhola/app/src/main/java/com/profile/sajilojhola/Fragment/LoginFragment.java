@@ -1,4 +1,4 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,17 +19,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.profile.sajilojhola.Activity.LoginActivity;
+import com.profile.sajilojhola.Activity.MainActivity;
+import com.profile.sajilojhola.R;
+
 import java.util.ArrayList;
 
 public class LoginFragment extends Fragment {
 
     // initial the global variable
-    private Button btnLogin, btnFacebook, btnGoogle, btnTwitter;
+    private Button btnBackLeftArrow, btnLogin, btnFacebook, btnGoogle, btnTwitter;
     private TextView tvForgotPassword, tvSignUp;
     private EditText tvUsername, tvPassword;
     private CheckBox btnCheckBox;
 
-    private boolean check = true;
     private View loginView;
 
     ArrayList<java.io.Serializable> loginArrayList = new ArrayList<>();
@@ -50,24 +53,51 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // create an object of Fragment class
         SingUpFragment singUpFragment = new SingUpFragment();
         FacebookLoginFragment facebookLoginFragment = new FacebookLoginFragment();
         TwitterLoginFragment twitterLoginFragment = new TwitterLoginFragment();
 
+        // initialize the variable findViewById for textFields
+        tvUsername = loginView.findViewById(R.id.tvLoginUsername);
+        tvPassword = loginView.findViewById(R.id.tvLoginPassword);
+
         // initialize the id findViewById for button
+        btnBackLeftArrow = loginView.findViewById(R.id.btnBackLeftArrow);
+        btnCheckBox = loginView.findViewById(R.id.btnCheckBox);
         btnLogin = loginView.findViewById(R.id.btnLogin);
         btnFacebook = loginView.findViewById(R.id.icFacebook);
         btnGoogle = loginView.findViewById(R.id.icGoogle);
         btnTwitter = loginView.findViewById(R.id.btnTwitter);
-        btnCheckBox = loginView.findViewById(R.id.btnCheckBox);
 
         // initialize the id findViewById for text
         tvForgotPassword = loginView.findViewById(R.id.tvForgotPassword);
         tvSignUp = loginView.findViewById(R.id.tvSignUp);
 
-        // initialize the variable findViewById for textFields
-        tvUsername = loginView.findViewById(R.id.tvLoginUsername);
-        tvPassword = loginView.findViewById(R.id.tvLoginPassword);
+        // create a setOnClickListener methods in btnBackLeftArrow where click to go to Login Activity class
+        btnBackLeftArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intentLogin);
+            }
+        });
+
+        // create a setOnClickListener methods in btnCheckBox where click to toast message display
+        final boolean[] check = {false};
+        btnCheckBox.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                if (!check[0]){
+                    btnCheckBox.setText("Thanks for remember");
+                    check[0] = true;
+                } else {
+                    btnCheckBox.setText("Remember Me!");
+                    check[0] = false;
+                }
+            }
+        });
 
         // create a setOnClickListener methods in login button where click to go main activity
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +126,8 @@ public class LoginFragment extends Fragment {
                             startActivity(intentMain);
                             // create an object of LoginActivity then call the openApp() methods
                             toastMassage("Welcome to Sano Jhola");
+                            // finish the fragment
+
                         } else {
                             tvPassword.setTextColor(Color.RED);
                             toastMassage("Invalid password");
@@ -163,25 +195,6 @@ public class LoginFragment extends Fragment {
     // create a toastMassage method which accept the String parameter
     public void toastMassage(String message){
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-    }
-
-    // check the duplicated data (this methods recently unused)
-    public boolean isDuplicateUsernamePassword(String loginUsername, String loginPassword){
-        // get the user data from arrayList
-        String signUpUsername = String.valueOf(loginArrayList.get(1));
-        String signUpPassword = String.valueOf(loginArrayList.get(2));
-
-        // is condition used to check the duplicate
-        if (!signUpUsername.equals(loginUsername)) {
-            toastMassage("Invalid username");
-        } else {
-            if (!signUpPassword.equals(loginPassword)){
-                toastMassage("Invalid password");
-            } else {
-                return true;
-            }
-        }
-        return false;
     }
 
     // create the setData method where Sign up data are add in arrayList

@@ -1,8 +1,10 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.profile.sajilojhola.R;
 
 public class MenuActivity extends AppCompatActivity {
 

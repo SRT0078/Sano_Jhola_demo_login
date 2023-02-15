@@ -1,10 +1,12 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.profile.sajilojhola.R;
 
 public class SliderActivity extends AppCompatActivity {
 

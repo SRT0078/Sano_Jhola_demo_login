@@ -1,6 +1,5 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.profile.sajilojhola.Fragment.LoginFragment;
+import com.profile.sajilojhola.R;
 
 public class PasswordForgotFragment extends Fragment {
 

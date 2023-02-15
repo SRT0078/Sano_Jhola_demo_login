@@ -1,4 +1,4 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Activity;
 
 public class UserData {
     String username;

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FacebookLoginFragment">
+    tools:context=".Fragment.FacebookLoginFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,11 +27,12 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:src="@mipmap/img_facebook_logo" />
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/img_facebook_logo"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/textView"
@@ -83,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:backgroundTint="#576DEA"
             android:padding="10dp"
@@ -115,8 +116,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="55dp"
                     android:text="Forgot Password?"
                     android:textColor="#ffffff" />
             </LinearLayout>

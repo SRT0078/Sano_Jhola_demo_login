@@ -22,7 +22,7 @@
         android:title="Notification" />
 
     <item
-        android:id="@+id/navbar_ic_search"
+        android:id="@+id/btnNavbar_search"
         android:icon="@drawable/ic_baseline_search_navbar"
         android:title="Search" />
 

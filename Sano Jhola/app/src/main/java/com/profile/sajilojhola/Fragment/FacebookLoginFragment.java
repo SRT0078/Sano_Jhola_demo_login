@@ -1,4 +1,4 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.profile.sajilojhola.Activity.LoginActivity;
+import com.profile.sajilojhola.R;
 
 public class FacebookLoginFragment extends Fragment {
     // create the global variable
@@ -39,9 +42,10 @@ public class FacebookLoginFragment extends Fragment {
         // create the setOnClickListener method in btnBackLeftArrow login button where go Login page
         btnBackLeftArrow.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent LoginIntent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(LoginIntent);
+            public void onClick(View view) {
+
+//                Intent LoginIntent = new Intent(getActivity(), LoginActivity.class);
+//                startActivity(LoginIntent);
             }
         });
 

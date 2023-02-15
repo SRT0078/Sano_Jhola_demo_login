@@ -1,5 +1,6 @@
-package com.profile.sajilojhola;
+package com.profile.sajilojhola.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -16,6 +17,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.profile.sajilojhola.Activity.LoginActivity;
+import com.profile.sajilojhola.R;
+import com.profile.sajilojhola.Activity.UserData;
+
 import java.util.ArrayList;
 
 public class SingUpFragment extends Fragment {
@@ -28,7 +33,7 @@ public class SingUpFragment extends Fragment {
     LoginFragment loginFragment = new LoginFragment();
 
     // create an arrayList and object of UserData class
-    // ArrayList<UserData> arrayList = new ArrayList<>();
+//     ArrayList<String> arrayList = new ArrayList<>();
     UserData userData = new UserData();
 
 //    int phoneNum;
@@ -44,7 +49,7 @@ public class SingUpFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         signUpView = inflater.inflate(R.layout.fragment_sing_up, container, false);
         return signUpView;
@@ -53,6 +58,8 @@ public class SingUpFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+//        LoginActivity loginActivity = new LoginActivity();
 
         // initialize the id findViewById for button
         btnLeftBack = signUpView.findViewById(R.id.btnBackLeftArrow);
@@ -70,6 +77,9 @@ public class SingUpFragment extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
+
+//                Intent singUpIntern = new Intent(getActivity(), LoginActivity.class);
+//                startActivity(singUpIntern);
             }
         });
 
@@ -79,7 +89,6 @@ public class SingUpFragment extends Fragment {
             public void onClick(View view) {
 //                try {
                     tvPhoneNumber.setTextColor(Color.BLACK);
-//                    phoneNum = Integer.parseInt(tvPhoneNumber.getText().toString().trim());
                     phoneNum = tvPhoneNumber.getText().toString().trim();
                     username = tvUserName.getText().toString().trim();
                     password = tvPassWord.getText().toString().trim();
@@ -102,6 +111,9 @@ public class SingUpFragment extends Fragment {
                             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                             fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
 
+//                            Intent singUpIntent = new Intent(getActivity(), LoginActivity.class);
+//                            startActivity(singUpIntent);
+
                         } else {
                             // display the toast message and set the color in texField
                             toastMassage("Invalid number!");
@@ -121,6 +133,9 @@ public class SingUpFragment extends Fragment {
                 // create the object of class and call the SingUpFragment class
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
+
+//                Intent singUpIntern = new Intent(getActivity(), LoginActivity.class);
+//                startActivity(singUpIntern);
             }
         });
     }

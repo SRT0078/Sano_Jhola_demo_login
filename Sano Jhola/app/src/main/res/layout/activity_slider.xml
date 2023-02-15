@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".SliderActivity">
+    tools:context=".Activity.SliderActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,41 +17,27 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,UselessParent">
 
-        <FrameLayout
-            android:id="@+id/SliderFrameLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/ic_logo"
+                android:contentDescription="@null"
+                tools:ignore="MissingConstraints" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:background="@mipmap/ic_logo"
-                    android:contentDescription="@null"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Sano Jhola"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textStyle="italic"
-                    tools:layout_editor_absoluteX="11dp"
-                    tools:layout_editor_absoluteY="487dp"
-                    tools:ignore="MissingConstraints" />
-
-            </LinearLayout>
-
-        </FrameLayout>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Sano Jhola"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
