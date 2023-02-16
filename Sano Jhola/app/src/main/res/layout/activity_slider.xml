@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
         tools:ignore="MissingConstraints,UselessParent">
 
             <ImageView
@@ -24,6 +25,50 @@
                 android:background="@mipmap/ic_logo"
                 android:contentDescription="@null"
                 tools:ignore="MissingConstraints" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvFirst"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvSecond"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvThird"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvFourth"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF" />
+
+        </GridLayout>
 
     </LinearLayout>
 

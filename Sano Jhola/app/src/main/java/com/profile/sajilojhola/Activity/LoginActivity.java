@@ -1,13 +1,11 @@
 package com.profile.sajilojhola.Activity;
 
-import static android.app.PendingIntent.getActivity;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +16,8 @@ import com.profile.sajilojhola.R;
 import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
+
+    ImageView profileImageCapture;
 
     // create an object of LoginFragment and SingUpFragment class
     LoginFragment loginFragment = new LoginFragment();
@@ -31,7 +31,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // initial the global variable
+        // initial the global variable of Button
+        profileImageCapture = findViewById(R.id.profileImageCapture);
+
         TextView btnLoginWithNewAccount = findViewById(R.id.btnLoginNewAccount);
         TextView btnCreateAccount = findViewById(R.id.btnCreateAccount);
 
@@ -56,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
     public void toastMassage(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
-
 }
 
 

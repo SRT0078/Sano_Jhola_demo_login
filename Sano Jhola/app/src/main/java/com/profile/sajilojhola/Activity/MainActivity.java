@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnMenu = findViewById(R.id.btnMenu);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        //
+        // create an setOnItemSelectedListener methods where buttonNavicationBar button to go the fragment
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("SetTextI18n")
             @Override

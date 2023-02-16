@@ -48,20 +48,21 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingEnd="165dp"
                         android:text="@string/login"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         tools:ignore="RtlSymmetry,TextContrastCheck" />
 
                     <ImageView
-                        android:layout_width="100dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
+                        android:layout_marginStart="155dp"
                         android:background="@mipmap/ic_logo"
                         android:contentDescription="@null" />
 
