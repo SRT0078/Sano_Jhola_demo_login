@@ -1,6 +1,7 @@
 package com.profile.sajilojhola.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -145,9 +146,36 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // create the object of class and call the SingUpFragment class
-                PasswordForgotFragment passwordForgotFragment = new PasswordForgotFragment();
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.LoginFrameContener, passwordForgotFragment).commit();
+                Dialog dialog = new Dialog(getActivity());
+                dialog.setCancelable(true);
+                dialog.setContentView(R.layout.custom_dialog_password_forgot);
+                dialog.show();
+                // initialize the button from custom dialog box
+                Button buttonDismiss = dialog.findViewById(R.id.btnDismiss);
+                Button buttonSendRequest = dialog.findViewById(R.id.btnSendRequest);
+                EditText editTextEmail = dialog.findViewById(R.id.editText_email);
+
+                // create an setOnClickListener
+                buttonDismiss.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                buttonSendRequest.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String email = editTextEmail.getText().toString().trim();
+                        if(!email.equals("")){
+                            dialog.dismiss();
+                            PasswordForgotFragment passwordForgotFragment = new PasswordForgotFragment();
+                            FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.LoginFrameContener, passwordForgotFragment).commit();
+                        } else {
+                            toastMassage("Please enter the valid email");
+                        }
+                    }
+                });
             }
         });
 
