@@ -7,13 +7,14 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.profile.sajilojhola.R;
 
 public class SliderActivity extends AppCompatActivity {
 
-    TextView tvFirst, tvSecond, tvThird, tvFourth;
+    Button btnSkip, btnBack, btnNext;
 
     @SuppressLint({"MissingInflatedId", "ResourceAsColor"})
     @Override
@@ -21,11 +22,9 @@ public class SliderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slider);
 
-        tvFirst = findViewById(R.id.tvFirst);
-        tvSecond = findViewById(R.id.tvSecond);
-        tvThird = findViewById(R.id.tvThird);
-        tvFourth = findViewById(R.id.tvFourth);
-
+        btnSkip = findViewById(R.id.btnSkip);
+        btnBack = findViewById(R.id.btnBack);
+        btnNext = findViewById(R.id.btnNext);
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
 //            public void run() {
@@ -50,6 +49,11 @@ public class SliderActivity extends AppCompatActivity {
 //                tvFourth.setBackgroundColor(android.R.color.holo_blue_light);
 //            }
 //        },2500);
+
+        // button are INVISIBLE
+        btnSkip.setVisibility(Button.INVISIBLE);
+        btnBack.setVisibility(Button.INVISIBLE);
+        btnNext.setVisibility(Button.INVISIBLE);
 
         // go to the Login activity class
         new Handler().postDelayed(new Runnable() {

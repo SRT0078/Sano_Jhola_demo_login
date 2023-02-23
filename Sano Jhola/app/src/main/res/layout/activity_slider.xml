@@ -6,17 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".Activity.SliderActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <Button
+        android:id="@+id/btnSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:background="@drawable/button_shapes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <FrameLayout
+        android:id="@+id/sliderFrameContener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints,UselessParent">
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,UseCompoundDrawables,UselessParent">
 
             <ImageView
                 android:layout_width="150dp"
@@ -26,63 +43,41 @@
                 android:contentDescription="@null"
                 tools:ignore="MissingConstraints" />
 
-        <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp">
-
             <TextView
-                android:id="@+id/tvFirst"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="#FFFFFF" />
+                android:layout_marginTop="10dp"
+                android:text="Sano Jhola"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp" />
 
-            <TextView
-                android:id="@+id/tvSecond"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="#FFFFFF" />
+        </LinearLayout>
+    </FrameLayout>
 
-            <TextView
-                android:id="@+id/tvThird"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="#FFFFFF" />
-
-            <TextView
-                android:id="@+id/tvFourth"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="#FFFFFF" />
-
-        </GridLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Sano Jhola"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:layout_marginBottom="20dp"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:background="@drawable/button_shapes"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:background="@drawable/button_shapes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
