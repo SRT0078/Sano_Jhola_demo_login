@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -28,12 +29,7 @@ import java.util.ArrayList;
 
 public class LoginFragment extends Fragment {
 
-    // initial the global variable
-    private Button btnBackLeftArrow, btnLogin, btnFacebook, btnGoogle, btnTwitter;
-    private TextView tvForgotPassword, tvSignUp;
     private EditText tvUsername, tvPassword;
-    private CheckBox btnCheckBox;
-
     private View loginView;
 
     ArrayList<java.io.Serializable> loginArrayList = new ArrayList<>();
@@ -56,24 +52,21 @@ public class LoginFragment extends Fragment {
 
         // create an object of Fragment class
         SingUpFragment singUpFragment = new SingUpFragment();
-        FacebookLoginFragment facebookLoginFragment = new FacebookLoginFragment();
         TwitterLoginFragment twitterLoginFragment = new TwitterLoginFragment();
 
         // initialize the variable findViewById for textFields
         tvUsername = loginView.findViewById(R.id.tvLoginUsername);
         tvPassword = loginView.findViewById(R.id.tvLoginPassword);
 
-        // initialize the id findViewById for button
-        btnBackLeftArrow = loginView.findViewById(R.id.btnBackLeftArrow);
-        btnCheckBox = loginView.findViewById(R.id.btnCheckBox);
-        btnLogin = loginView.findViewById(R.id.btnLogin);
-        btnFacebook = loginView.findViewById(R.id.icFacebook);
-        btnGoogle = loginView.findViewById(R.id.icGoogle);
-        btnTwitter = loginView.findViewById(R.id.btnTwitter);
-
-        // initialize the id findViewById for text
-        tvForgotPassword = loginView.findViewById(R.id.tvForgotPassword);
-        tvSignUp = loginView.findViewById(R.id.tvSignUp);
+        // initial the global variable in button and text
+        CheckBox btnCheckBox = loginView.findViewById(R.id.btnCheckBox);
+        Button btnBackLeftArrow = loginView.findViewById(R.id.btnBackLeftArrow);
+        Button btnLogin = loginView.findViewById(R.id.btnLogin);
+        Button btnFacebook = loginView.findViewById(R.id.icFacebook);
+        Button btnGoogle = loginView.findViewById(R.id.icGoogle);
+        Button btnTwitter = loginView.findViewById(R.id.btnTwitter);
+        TextView tvForgotPassword = loginView.findViewById(R.id.tvForgotPassword);
+        TextView tvSignUp = loginView.findViewById(R.id.tvSignUp);
 
         // create a setOnClickListener methods in btnBackLeftArrow where click to go to Login Activity class
         btnBackLeftArrow.setOnClickListener(new View.OnClickListener() {
@@ -204,9 +197,9 @@ public class LoginFragment extends Fragment {
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // create the object of class and call the FacebookLoginFragment class
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.LoginFrameContener, facebookLoginFragment).commit();
+                // intent used ot go the facebook page
+                Intent followIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com"));
+                startActivity(followIntent);
             }
         });
 

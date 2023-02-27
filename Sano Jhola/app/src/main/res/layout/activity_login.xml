@@ -42,9 +42,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:paddingStart="10dp"
                     android:text="Tap your profile picture to log in"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -58,14 +58,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="15dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/profileImageCapture"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
@@ -75,7 +74,7 @@
                             android:contentDescription="@null" />
 
                         <TextView
-                            android:layout_width="245dp"
+                            android:layout_width="250dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:paddingStart="15sp"
@@ -84,16 +83,13 @@
                             tools:ignore="RtlSymmetry" />
 
                         <Button
-                            android:id="@+id/btnMenu"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:layout_marginEnd="5dp"
+                            android:layout_marginEnd="5sp"
                             android:background="@drawable/ic_baseline_more_vert_24"
                             android:backgroundTint="#6D292828"
-                            android:padding="18dp"
-                            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     </LinearLayout>
 
@@ -101,10 +97,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="15dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -117,7 +113,7 @@
                             android:contentDescription="@null" />
 
                         <TextView
-                            android:layout_width="245dp"
+                            android:layout_width="250dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:paddingStart="15sp"
@@ -160,7 +156,8 @@
                             android:layout_marginEnd="20dp"
                             android:background="#239EFF"
                             android:src="@drawable/ic_baseline_add_24"
-                            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+                            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,SpeakableTextPresentCheck"
+                            android:contentDescription="@null" />
 
                         <TextView
                             android:id="@+id/btnLoginNewAccount"
@@ -169,7 +166,6 @@
                             android:layout_gravity="center"
                             android:padding="10sp"
                             android:background="#FCF3F2F2"
-                            android:textSize="15sp"
                             android:text="Login Into Another Account" />
 
                     </LinearLayout>
@@ -190,7 +186,8 @@
                             android:layout_marginEnd="20dp"
                             android:background="#239EFF"
                             android:src="@drawable/ic_baseline_search_24"
-                            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+                            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,SpeakableTextPresentCheck"
+                            android:contentDescription="@null" />
 
                         <TextView
                             android:id="@+id/btnFindAccount"
@@ -199,7 +196,6 @@
                             android:layout_gravity="center"
                             android:padding="10sp"
                             android:background="#FCF3F2F2"
-                            android:textSize="15sp"
                             android:text="Find Your Account" />
 
                     </LinearLayout>
@@ -249,7 +245,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="80dp"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:orientation="vertical">
 
                     <TextView
