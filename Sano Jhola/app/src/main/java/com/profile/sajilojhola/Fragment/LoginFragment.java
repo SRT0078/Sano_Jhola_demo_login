@@ -206,9 +206,9 @@ public class LoginFragment extends Fragment {
         btnTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // create the object of class and call the FacebookLoginFragment class
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.LoginFrameContener, twitterLoginFragment).commit();
+                // intent used ot go the facebook page
+                Intent followIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com"));
+                startActivity(followIntent);
             }
         });
     }

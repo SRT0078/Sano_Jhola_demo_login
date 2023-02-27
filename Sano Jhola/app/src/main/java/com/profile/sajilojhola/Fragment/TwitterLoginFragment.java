@@ -48,9 +48,6 @@ public class TwitterLoginFragment extends Fragment {
                 // create the object of class and call the SingUpFragment class
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
-
-//                Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
-//                startActivity(intentLogin);
             }
         });
 
@@ -61,9 +58,6 @@ public class TwitterLoginFragment extends Fragment {
                 // create the object of class and call the SingUpFragment class
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
-
-//                Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
-//                startActivity(intentLogin);
             }
         });
 
