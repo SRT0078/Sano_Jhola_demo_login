@@ -25,4 +25,10 @@
     <string name="save">Save</string>
     <string name="sitaram_thing">Sitaram @2023</string>
     <string name="create_new_account">Create new Account</string>
+    <string name="send_password">Send password</string>
+    <string name="code_is_already_display_the_toast_message">code is already display the toast message</string>
+    <string name="enter_your_email_and_set_a_new_password">Enter your email and set a new password</string>
+    <string name="forgot_your_password">Forgot your password</string>
+    <string name="otp_code">OTP code</string>
+    <string name="email">Email</string>
 </resources>

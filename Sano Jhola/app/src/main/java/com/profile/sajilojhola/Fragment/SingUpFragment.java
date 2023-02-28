@@ -77,9 +77,6 @@ public class SingUpFragment extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
-
-//                Intent singUpIntern = new Intent(getActivity(), LoginActivity.class);
-//                startActivity(singUpIntern);
             }
         });
 
@@ -110,10 +107,6 @@ public class SingUpFragment extends Fragment {
                             // create the object of class and call the SingUpFragment class
                             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                             fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
-
-//                            Intent singUpIntent = new Intent(getActivity(), LoginActivity.class);
-//                            startActivity(singUpIntent);
-
                         } else {
                             // display the toast message and set the color in texField
                             toastMassage("Invalid number!");
@@ -133,9 +126,6 @@ public class SingUpFragment extends Fragment {
                 // create the object of class and call the SingUpFragment class
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, loginFragment).commit();
-
-//                Intent singUpIntern = new Intent(getActivity(), LoginActivity.class);
-//                startActivity(singUpIntern);
             }
         });
     }

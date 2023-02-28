@@ -24,18 +24,28 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
-                app:cardCornerRadius="80dp">
+                app:cardCornerRadius="60dp">
 
                 <ImageView
                     android:id="@+id/profileImageCapture"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:contentDescription="@null"
-                    android:src="@mipmap/img_sing_up"
+                    android:src="@mipmap/img_user_sample"
+                    android:background="@drawable/ic_baseline_home_navbar"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_baseline_home_navbar"
+                    android:contentDescription="@null"
                     android:textAlignment="center" />
 
             </androidx.cardview.widget.CardView>

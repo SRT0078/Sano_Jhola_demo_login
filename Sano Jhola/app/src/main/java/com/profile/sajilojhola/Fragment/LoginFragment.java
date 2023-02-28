@@ -1,7 +1,9 @@
 package com.profile.sajilojhola.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -53,6 +55,7 @@ public class LoginFragment extends Fragment {
         // create an object of Fragment class
         SingUpFragment singUpFragment = new SingUpFragment();
         TwitterLoginFragment twitterLoginFragment = new TwitterLoginFragment();
+        PasswordForgotFragment passwordForgotFragment = new PasswordForgotFragment();
 
         // initialize the variable findViewById for textFields
         tvUsername = loginView.findViewById(R.id.tvLoginUsername);
@@ -138,37 +141,57 @@ public class LoginFragment extends Fragment {
         tvForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // create the object of class and call the SingUpFragment class
-                Dialog dialog = new Dialog(getActivity());
-                dialog.setCancelable(true);
-                dialog.setContentView(R.layout.custom_dialog_password_forgot);
-                dialog.show();
-                // initialize the button from custom dialog box
-                Button buttonDismiss = dialog.findViewById(R.id.btnDismiss);
-                Button buttonSendRequest = dialog.findViewById(R.id.btnSendRequest);
-                EditText editTextEmail = dialog.findViewById(R.id.editText_email);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Logout");
+                builder.setMessage("Are you sure forgot your password?");
+                // press the yes the logout the app
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.LoginFrameContener, passwordForgotFragment).commit();
+                    }
+                });
+                // press the No then cancel to logout the app
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });builder.show();
 
-                // create an setOnClickListener
-                buttonDismiss.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.dismiss();
-                    }
-                });
-                buttonSendRequest.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        String email = editTextEmail.getText().toString().trim();
-                        if(!email.equals("")){
-                            dialog.dismiss();
-                            PasswordForgotFragment passwordForgotFragment = new PasswordForgotFragment();
-                            FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                            fragmentTransaction.replace(R.id.LoginFrameContener, passwordForgotFragment).commit();
-                        } else {
-                            toastMassage("Please enter the valid email");
-                        }
-                    }
-                });
+//
+//                // create the object of class and call the SingUpFragment class
+//                Dialog dialog = new Dialog(getActivity());
+//                dialog.setCancelable(true);
+//                dialog.setContentView(R.layout.custom_dialog_password_forgot);
+//                dialog.show();
+//                // initialize the button from custom dialog box
+//                Button buttonDismiss = dialog.findViewById(R.id.btnDismiss);
+//                Button buttonSendRequest = dialog.findViewById(R.id.btnSendRequest);
+//                EditText editTextEmail = dialog.findViewById(R.id.editText_email);
+//
+//                // create an setOnClickListener
+//                buttonDismiss.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//                buttonSendRequest.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        String email = editTextEmail.getText().toString().trim();
+//                        if(!email.equals("")){
+//                            dialog.dismiss();
+//                            PasswordForgotFragment passwordForgotFragment = new PasswordForgotFragment();
+//                            FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+//                            fragmentTransaction.replace(R.id.LoginFrameContener, passwordForgotFragment).commit();
+//                        } else {
+//                            toastMassage("Please enter the valid email");
+//                        }
+//                    }
+//                });
             }
         });
 
@@ -179,8 +202,6 @@ public class LoginFragment extends Fragment {
                 // create the object of class and call the SingUpFragment class
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.LoginFrameContener, singUpFragment).commit();
-
-//                getSupportFragmentManager().beginTransaction().replace(R.id.loginFrameLayout, singUpFragment).commit();
             }
         });
 
